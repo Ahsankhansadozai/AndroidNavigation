@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/quizWelcomeFragment2">
+    <fragment
+        android:id="@+id/quizWelcomeFragment2"
+        android:name="com.example.andoridnavigationcomponent.fragments.QuizWelcomeFragment"
+        android:label="fragment_quiz_welcome"
+        tools:layout="@layout/fragment_quiz_welcome" >
+        <action
+            android:id="@+id/action_quizWelcomeFragment2_to_quizFragment2"
+            app:destination="@id/quizFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment2"
+        android:name="com.example.andoridnavigationcomponent.fragments.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_quizFragment2_to_lostFragment2"
+            app:destination="@id/lostFragment2"
+            app:popUpTo="@id/lostFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizFragment2_to_winFragment2"
+            app:destination="@id/winFragment2"
+            app:popUpTo="@id/winFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostFragment2"
+        android:name="com.example.andoridnavigationcomponent.fragments.LostFragment"
+        android:label="fragment_lost_fragment"
+        tools:layout="@layout/fragment_lost_fragment" >
+        <action
+            android:id="@+id/action_lostFragment2_to_quizFragment2"
+            app:destination="@id/quizFragment2"
+            app:popUpTo="@id/quizFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment2"
+        android:name="com.example.andoridnavigationcomponent.fragments.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment2_to_quizFragment2"
+            app:destination="@id/quizFragment2"
+            app:popUpTo="@id/winFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
